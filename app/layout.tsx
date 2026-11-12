@@ -1,12 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Figtree, Newsreader } from "next/font/google";
+import localFont from "next/font/local";
 import Link from "next/link";
 import { RegisterSW } from "@/components/register-sw";
 import "./globals.css";
 import "maplibre-gl/dist/maplibre-gl.css";
 
-const sans = Figtree({ subsets: ["latin"], variable: "--font-figtree" });
-const serif = Newsreader({ subsets: ["latin"], weight: ["500", "600"], variable: "--font-newsreader" });
+const sans = localFont({
+  src: "./fonts/figtree-latin.woff2",
+  weight: "400 700",
+  variable: "--font-figtree",
+  display: "swap",
+});
+const serif = localFont({
+  src: "./fonts/newsreader-latin.woff2",
+  weight: "500 600",
+  variable: "--font-newsreader",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: { default: "FieldWorks", template: "%s · FieldWorks" },
