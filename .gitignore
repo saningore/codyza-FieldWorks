@@ -1,0 +1,13 @@
+node_modules
+.next
+.env
+.env.local
+.env.production
+test-results
+playwright-report
+blob-report
+*.tsbuildinfo
+coverage
+.vercel
+storage
+public/maplibre-gl-worker.mjs
